@@ -16,7 +16,7 @@ In the experiments described in the references only 15N is active during the mix
 ### Data Preparation
 
 Data files need to be in CSV format. Example files are included in this directory, e.g. H76_noise.csv. This files looks like this:
-
+```
  t,IAA,IAAn,IBB,IBBn,IAB,IABn,IBA,IBAn 
  
  0.0232,1553000,49000,816700,49000,329600,49000,233100,49000
@@ -38,6 +38,7 @@ Data files need to be in CSV format. Example files are included in this director
  0.5832,169400,25500,63770,25500,95080,25500,77400,25500
  
  0.8032,13060,23000,16940,23000,10,23000,10,23000
+ ```
 
 The first line gives titles to the columns - these are required. The remaining lines are exchange time (first column) and intensity data followed by noise estimate for each of the four peaks. Basically, each row is the time and then intensity data for the four peaks of an exchange system at that time point.  
 
