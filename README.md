@@ -17,7 +17,7 @@ In the experiments described in the references only 15N is active during the mix
 
 Data files need to be in CSV format. Example files are included in this directory, e.g. H76_noise.csv. This files looks like this:
 
-t,IAA,IAAn,IBB,IBBn,IAB,IABn,IBA,IBAn
+t,IAA,IAAn,IBB,IBBn,IAB,IABn,IBA,IBAn 
 0.0232,1553000,49000,816700,49000,329600,49000,233100,49000
 0.0432,1345000,49000,613200,49000,385400,49000,312600,49000
 0.0632,1208000,47000,580400,47000,458200,47000,364200,47000
