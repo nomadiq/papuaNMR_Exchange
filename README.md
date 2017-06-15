@@ -126,7 +126,7 @@ There is no need to add a .pdf to the end of a file name, it will be added anywa
 
 It should something like this:
 
-![alt text](https://raw.githubusercontent.com/nomadiq/papuaNMR_Exchange/blob/master/Example_Data/H76_Monte_Carlo.png)
+![alt text](https://raw.githubusercontent.com/nomadiq/papuaNMR_Exchange/master/Example_Data/H76_Monte_Carlo.png)
 
 **References:**
 
