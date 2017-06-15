@@ -81,7 +81,7 @@ def fit(data, figure=0, pdf=''):
                  ha='center', va='center', transform=ax.transAxes)
         
         if pdf != '':
-            plt.savefig(pdf+".pdf", format='pdf')
+            plt.savefig(pdf, format='pdf')
 
         plt.show()
         #print('A0 (Arbitary intenisty): ' + str(best[4]))
