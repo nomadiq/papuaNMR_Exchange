@@ -6,10 +6,10 @@
 
 These python programs are used to perform a fitting of the equations that describe peak intensities as a function of R1 relaxation,  exchange rate (k) and exchange (mixing) time between two slowly exchanging conformations. In the Farrow paper below, these confirmations are labeled 'n' and 'u' (native versus unfolded). The nomenclature used for this fitting software is state 'A' and state 'B'. Four peaks appear in these experiments for each exchanging system. The intensity of these four peaks is labeled as:
 
-IAA: The intensity of system A that is recorded at position A
-IBB: The intensity of system B that is recorded at position B
-IAB: The intensity of system A that has moved to position B
-IBA: The intenisty of system B that has moved to position A
+* IAA: The intensity of system A that is recorded at position A
+* IBB: The intensity of system B that is recorded at position B
+* IAB: The intensity of system A that has moved to position B
+* IBA: The intenisty of system B that has moved to position A
 
 In the experiments described in the references only 15N is active during the mixing (exchange) period so the peak for 'A moving to B' is seen as a peak with the same 1H frequency as A but now a frequency of B for 15N. 
 
