@@ -61,8 +61,10 @@ You'll see that each time point has the same noise level. This could be just a s
 N.B. - the GUI program does not work right now. Its a work in progress.
 
 The fitting is done with a command line program called PapuaExchange.py. Execute this program with the command:
-```python3 PapuaExchange.py [-h] -data DATA_FILE [-plot PLOT_OUTPUT]
-                            [-mc MONTE_CARLO] [-pdf PDF_PLOT]```
+```
+python3 PapuaExchange.py [-h] -data DATA_FILE [-plot PLOT_OUTPUT]
+                            [-mc MONTE_CARLO] [-pdf PDF_PLOT]
+```
 
 
 
