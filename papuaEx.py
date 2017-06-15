@@ -1,11 +1,9 @@
-import csv as csv
 import pandas as pd
 import matplotlib.pyplot as plt
 import math
 from scipy.optimize import leastsq
 import numpy as np
-from matplotlib import rc
-rc('text', usetex=True)
+
 
 
 # define the functions for equation expressions

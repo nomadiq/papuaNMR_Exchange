@@ -1,15 +1,14 @@
-import csv as csv
-import pandas as pd
-import matplotlib
-matplotlib.use("TkAgg")
-from matplotlib import pyplot as plt
 import math
-from scipy.optimize import leastsq
-import numpy as np
-from matplotlib import rc
-rc('text', usetex=True)
-import papuaEx as ex 
 import argparse
+
+import numpy as np
+import matplotlib
+from matplotlib import pyplot as plt
+from scipy.optimize import leastsq
+import pandas as pd
+
+import papuaEx as ex 
+
 
 ### Get the arguments
 
