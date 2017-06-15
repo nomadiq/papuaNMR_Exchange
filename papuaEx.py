@@ -39,7 +39,7 @@ def fnMin(p,t,IAA,IBB,IAB,IBA):
     diffIBA = IBA-Iba(p,t)
     return np.concatenate((diffIAA, diffIBB, diffIAB, diffIBA))
 
-def fit(data, figure=0):
+def fit(data, figure=0, pdf=''):
     
     t = data['t'].values.astype(float)
 
@@ -55,6 +55,7 @@ def fit(data, figure=0):
     best, cov, info, message, ier = leastsq(fnMin,
                                         par_init, args=(t, IAA,IBB,IAB,IBA),
                                         full_output=True)
+    
     
     
     if figure==1:
@@ -80,6 +81,10 @@ def fit(data, figure=0):
                  r'$IA_{0}$ = ' + "{0:.0f}".format(best[4]) + '\n' + 
                  r'$IB_{0}$ = ' + "{0:.0f}".format(best[5]),
                  ha='center', va='center', transform=ax.transAxes)
+        
+        if pdf != '':
+            plt.savefig(pdf+".pdf", format='pdf')
+
         plt.show()
         #print('A0 (Arbitary intenisty): ' + str(best[4]))
         #print('B0 (Arbitary intenisty): ' + str(best[5]))
@@ -87,6 +92,7 @@ def fit(data, figure=0):
         #print('R1B (sec):               ' + str(best[1]))
         #print('kab (sec^-1):            ' + str(best[2]))
         #print('kba (sec^-1):            ' + str(best[3]))
+        return best
 
     if figure==0:
         return best
@@ -126,12 +132,12 @@ def plotfit(datasets, datasetNames=''):
         
         
         i +=1
-        
+       
     plt.show()
         
 
 
-def mcfit(data, numSims, figure=0):
+def mcfit(data, numSims, figure=0, pdf=''):
     
     t = data['t'].values.astype(float)
     IAA = data['IAA'].values.astype(float)
@@ -181,8 +187,8 @@ def mcfit(data, numSims, figure=0):
     
     
     
-    best = np.mean(results, axis=0)
-    best_std = np.std(results, axis=0)
+    mean = np.mean(results, axis=0)
+    std = np.std(results, axis=0)
     
     #print best
     #print best_std
@@ -196,24 +202,30 @@ def mcfit(data, numSims, figure=0):
         plt.scatter(data['t'],data['IBA'])
         
         times = np.arange(0, t.max()*1.0, 0.0001)
-        plt.plot(times, Iaa(best,times))
-        plt.plot(times, Ibb(best,times))
-        plt.plot(times, Iab(best,times))
-        plt.plot(times, Iba(best,times))
+        plt.plot(times, Iaa(mean,times))
+        plt.plot(times, Ibb(mean,times))
+        plt.plot(times, Iab(mean,times))
+        plt.plot(times, Iba(mean,times))
         
 
         plt.text(0.6, 0.7, 
-                r'$k_{ab}$ = ' + "{0:.4f}".format(best[2]) + ' +/- ' + "{0:.4f}".format(best_std[2]) + '\n' + 
-                r'$k_{ba}$ = ' + "{0:.4f}".format(best[3]) + ' +/- ' + "{0:.4f}".format(best_std[3]) + '\n' + 
-                r'$R1_{a}$ = ' + "{0:.4f}".format(best[0]) + ' +/- ' + "{0:.4f}".format(best_std[0]) + '\n' + 
-                r'$R1_{b}$ = ' + "{0:.4f}".format(best[1]) + ' +/- ' + "{0:.4f}".format(best_std[1]) + '\n' + 
-                r'$IA_{0}$ = ' + "{0:.0f}".format(best[4]) + ' +/- ' + "{0:.4f}".format(best_std[4]) +'\n' + 
-                r'$IB_{0}$ = ' + "{0:.0f}".format(best[5]) + ' +/- ' + "{0:.4f}".format(best_std[5]),
+                r'$k_{ab}$ = ' + "{0:.4f}".format(mean[2]) + ' +/- ' + "{0:.4f}".format(std[2]) + '\n' + 
+                r'$k_{ba}$ = ' + "{0:.4f}".format(mean[3]) + ' +/- ' + "{0:.4f}".format(std[3]) + '\n' + 
+                r'$R1_{a}$ = ' + "{0:.4f}".format(mean[0]) + ' +/- ' + "{0:.4f}".format(std[0]) + '\n' + 
+                r'$R1_{b}$ = ' + "{0:.4f}".format(mean[1]) + ' +/- ' + "{0:.4f}".format(std[1]) + '\n' + 
+                r'$IA_{0}$ = ' + "{0:.0f}".format(mean[4]) + ' +/- ' + "{0:.4f}".format(std[4]) +'\n' + 
+                r'$IB_{0}$ = ' + "{0:.0f}".format(mean[5]) + ' +/- ' + "{0:.4f}".format(std[5]),
                 ha='center', va='center', transform=ax.transAxes)
-        plt.show()
         
+        
+        if pdf != '':
+            plt.savefig(pdf+".pdf", format='pdf') 
+        
+        plt.show()
+        return mean, std
+
     if figure==0:
-        return results
+        return mean, std
         
     
      
