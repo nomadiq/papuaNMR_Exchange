@@ -16,15 +16,15 @@ In the experiments described in the references only 15N is active during the mix
 ### Data Preparation
 
 
-|       t       |      IAA      |       IBB     |      IAB      |      IBA      |
+|     t(sec)    |      IAA      |       IAAn     |      IBB      |      IBBn      |      IAB      |       IABn     |      IBA      |      IBAn      |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
+|     0.0232    | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
+|     0.0432    | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
+|     0.0632    | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
+|     0.0832    | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
+|     0.1032    | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
+|     0.1432    | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
+|     0.2232    | Content Cell  | Content Cell  | Content Cell  | Content Cell  | 
 
 
 ### Fitting
