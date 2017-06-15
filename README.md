@@ -63,8 +63,35 @@ N.B. - the GUI program does not work right now. Its a work in progress.
 The fitting is done with a command line program called PapuaExchange.py. Execute this program with the command:
 ```
 python3 PapuaExchange.py [-h] -data DATA_FILE [-plot PLOT_OUTPUT]
-                            [-mc MONTE_CARLO] [-pdf PDF_PLOT]
+                         [-mc MONTE_CARLO] [-pdf PDF_PLOT]
 ```
+Depending on the options, several things will happen. Firstly, in all cases the program will return the fitted parameters if they can be fitted. If the file format is wrong you will mostly get an ugly error. Check the file format. The file with the data is given with the option:
+```
+-data DATAFILE
+```
+where your CSV file name replaces DATAFILE
+
+If you want a plot on the screen of the data and the fit use:
+```
+-plot 1 or -plot Y
+```
+If not, just leave this out or use
+```
+-plot 0
+```
+Note: If you want a pdf file saved of the fitting, you must activate a plot 
+
+To name a pdf file for saving data, use:
+```
+-pdf PDF_PLOT
+```
+where PDF_PLOT is the name of the file to save.
+
+If you want to do a Monte Carlo Simulation to estimate how accurate you can model the parameters, use the following command
+```
+-mc MONTE_CARLO
+```
+where MONTE_CARLO is the number of simulations to run. I suggest about 50. If you dont have a noise estimate for your data or you just dont want to do a Monte Carlo simulation just leave this flag out. 
 
 
 
