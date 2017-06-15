@@ -6,10 +6,10 @@
 
 The fitting program is written in python. I recommend installing the anaconda distribution of python. You will need to use python3 and will also need a few common libraries installed.  The libraries you will need are:
 
-*Numpy
-*Matplotlib
-*SciPy
-*Pandas
+* Numpy
+* Matplotlib
+* SciPy
+* Pandas
 
 These python programs are used to perform a fitting of the equations that describe peak intensities as a function of R1 relaxation,  exchange rate (k) and exchange (mixing) time between two slowly exchanging conformations. In the Farrow paper below, these confirmations are labeled 'n' and 'u' (native versus unfolded). The nomenclature used for this fitting software is state 'A' and state 'B'. Four peaks appear in these experiments for each exchanging system. The intensity of these four peaks are labeled as:
 
