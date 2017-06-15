@@ -4,7 +4,14 @@
 
 ### Preamble
 
-These python programs are used to perform a fitting of the equations that describe peak intensities as a function of R1 relaxation,  exchange rate (k) and exchange (mixing) time between two slowly exchanging conformations. In the Farrow paper below, these confirmations are labeled 'n' and 'u' (native versus unfolded). The nomenclature used for this fitting software is state 'A' and state 'B'. Four peaks appear in these experiments for each exchanging system. The intensity of these four peaks is labeled as:
+The fitting program is written in python. I recommend installing the anaconda distribution of python. You will need to use python3 and will also need a few common libraries installed.  The libraries you will need are:
+
+*Numpy
+*Matplotlib
+*SciPy
+*Pandas
+
+These python programs are used to perform a fitting of the equations that describe peak intensities as a function of R1 relaxation,  exchange rate (k) and exchange (mixing) time between two slowly exchanging conformations. In the Farrow paper below, these confirmations are labeled 'n' and 'u' (native versus unfolded). The nomenclature used for this fitting software is state 'A' and state 'B'. Four peaks appear in these experiments for each exchanging system. The intensity of these four peaks are labeled as:
 
 * IAA: The intensity of system A that is recorded at position A
 * IBB: The intensity of system B that is recorded at position B
@@ -50,6 +57,7 @@ Nicely formated for clarity, it looks like this:
 You'll see that each time point has the same noise level. This could be just a single column but I havent implemented that (yet). You also don't have to have the noise estimates, but you will not be able to run Monte Carlo simulations to get an estimate of the accuracy of the fitting parameters. 
 
 ### Fitting
+
 
 
 
