@@ -98,8 +98,13 @@ where MONTE_CARLO is the number of simulations to run. I suggest about 50. If yo
 You can use the Example Data in the Example_Data directory. For example, a simple fit of the data with a simple return of the parameters would be done like this:
 
 ```
+python3 PapuaExchange.py -data Example_Data/H76.csv
+```
+or
+```
 python3 PapuaExchange.py -data Example_Data/H76_noise.csv
 ```
+
 which will return something like:
 ```
 IAA0: 2018878.1344
@@ -109,9 +114,19 @@ R1B: 3.5807
 k_ab: 9.6044
 k_ba: 6.9073
 ```
+Here, IAA0 and IBB0 are the initial (no mixing/exchange time) estimate of intensity for state A and B, respectively. R1A and R1B is an estimate of the Longtitudinal Relaxation Rate for state A and B, respectively. These numbers have units in the same units of the time numbers given in the data file (usually seconds). k_ab and k_ba are estimates of the rate of exchange from A to B and B to A, respectively. Again, the units of this time parameter is the same as the units used in the data file. 
 
+The file H76.csv, which has no noise estimates in it, works fine here because we don't do a Monte Carlo Simulation. But a file with noise esitmates works as well, so long as the first line of the CSV file is accurately labeled. 
 
+Now, lets do a full Monte Carlo Simulation with plotting and writing a PDF file. Try:
+```
+python3 PapuaExchange.py -data Example_Data/H76_noise.csv -mc 50 -plot 1 -pdf H76_Monte_Carlo
+```
+There is no need to add a .pdf to the end of a file name, it will be added anyway. This plots on the screen the data and fit and also saves a pdf file called H76_Monte_Carlo.pdf.
 
+It should something like this:
+
+![alt text](https://raw.githubusercontent.com/nomadiq/papuaNMR_Exchange/Example_Data/H76_Monte_Carlo.png)
 
 **References:**
 
