@@ -1,10 +1,11 @@
 # papuaNMR_Exchange
-Nz Exchange Fitting
+
+**Nz Exchange Fitting**
 
 
 
 
-References:
+**References:**
 
 Farrow N, Zhang O, Forman-Kay J, Kay L. (1994) A heteronuclear correlation experiment for simultaneous determination of 15N longitudinal decay and chemical exchange rates of systems in slow equilibrium. J. Biomol. NMR. 4(5) 727-34.
 
