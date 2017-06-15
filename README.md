@@ -93,8 +93,22 @@ If you want to do a Monte Carlo Simulation to estimate how accurate you can mode
 ```
 where MONTE_CARLO is the number of simulations to run. I suggest about 50. If you dont have a noise estimate for your data or you just dont want to do a Monte Carlo simulation just leave this flag out. 
 
+### Example commands
 
+You can use the Example Data in the Example_Data directory. For example, a simple fit of the data with a simple return of the parameters would be done like this:
 
+```
+python3 PapuaExchange.py -data Example_Data/H76_noise.csv
+```
+which will return something like:
+```
+IAA0: 2018878.1344
+IBB0: 1101658.4032
+R1A: 2.3819
+R1B: 3.5807
+k_ab: 9.6044
+k_ba: 6.9073
+```
 
 
 
