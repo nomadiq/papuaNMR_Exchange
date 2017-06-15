@@ -46,6 +46,8 @@ Nicely formated for clarity, it looks like this:
 |0.5832|169400|25500|63770|25500|95080|25500|77400|25500|
 |0.8032|13060|23000|16940|23000|10|23000|10|23000|
 
+You'll see that each time point has the same noise level. This could be just a single column but I havent implemented that (yet). You also don't have to have the noise estimates, but you will not be able to run Monte Carlo simulations to get an estimate of the accuracy of the fitting parameters. 
+
 ### Fitting
 
 
