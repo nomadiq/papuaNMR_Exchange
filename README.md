@@ -18,7 +18,9 @@ These python programs are used to perform a fitting of the equations that descri
 * IAB: The intensity of system A that has moved to position B
 * IBA: The intenisty of system B that has moved to position A
 
-In the experiments described in the references only 15N is active during the mixing (exchange) period so the peak for 'A moving to B' is seen as a peak with the same 1H frequency as A but now a frequency of B for 15N. 
+In the experiments described in the references 15N is encoded before the exchange period, so it does not change during the mixing period. So the peak for 'A to B' is seen as a peak with the same 15N frequency as A but now has a frequency of B for 1H. See schematic below.  
+
+![alt text](https://raw.githubusercontent.com/nomadiq/papuaNMR_Exchange/master/schematic.png)
 
 ### Data Preparation
 
